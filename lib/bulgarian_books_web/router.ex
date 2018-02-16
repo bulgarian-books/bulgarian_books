@@ -10,6 +10,10 @@ defmodule BulgarianBooksWeb.Router do
   
     resources "/authors", AuthorController, except: [:new, :edit]
     resources "/publishers", PublisherController, except: [:new, :edit]
+    resources "/languages", LanguageController, except: [:new, :edit]
+    resources "/genres", GenreController, except: [:new, :edit]
+    resources "/categories", CategoryController, except: [:new, :edit]
+    resources "/books", BookController, except: [:new, :edit]
 
     forward "/api", Absinthe.Plug,
       schema: BulgarianBooksWeb.Schema

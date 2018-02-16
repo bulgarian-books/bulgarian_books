@@ -1,7 +1,7 @@
 defmodule BulgarianBooks.Books.Publisher do
   use Ecto.Schema
   import Ecto.Changeset
-  alias BulgarianBooks.Books.Publisher
+  alias BulgarianBooks.Books.{Publisher, Book}
 
 
   schema "publishers" do
@@ -9,6 +9,7 @@ defmodule BulgarianBooks.Books.Publisher do
     field :name, :string
     field :page, :integer
     field :state, :string
+    has_many :books, Book
 
     timestamps()
   end

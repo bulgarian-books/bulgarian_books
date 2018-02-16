@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :bulgarian_books, BulgarianBooks.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "tad",
   database: "bulgarian_books_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
